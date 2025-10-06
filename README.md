@@ -1,6 +1,6 @@
 # Usage-Stat-Algorithm
 
-**Final project for COP 4530 - Data Structures II course**
+**Final project for COP 4530 - Data Structures II course**  
 **Summer 2025**
 
 ---
