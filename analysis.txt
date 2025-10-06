@@ -1,0 +1,25 @@
+Time Complexity Analyses:
+
+Reading Input Set: O(n), where n is the number of characters in the input
+Linear time complexity, as the input is being read character by character
+for each line.
+    *Performed in main while loop*
+
+Storing elements: O(1) average. O(n) worst case, where n is the number of elements
+I chose an unordered_map as my STL container to store my dataset. This choice gives me 
+an average O(1) per insert, as multiple collisions are unlikely to happen, but if this 
+does occur then worst-case runtime is O(n).
+    *Performed in main loop*
+
+Accessing element frequencies: O(1) average. O(n) worst case, where n is the number of elements
+Using a unordered_map gives an average O(1) per look-up, but if there multiple collisions
+this then becomes O(n).
+    *Performed in functor and heapifying process*
+
+Obtaining and Accessing Top Ten Most Frequent Elements: O(n + log n), where n is the number of elements
+This is the main algorithm to access the top ten elements for each type (characters, words, and numbers),
+Given the heapify algorithm of the STL priority_queue, creating a heap out of another container
+is O(n). This helps us avoid pushing each element one by one, which would be O(n log n).
+Then accessing the top 10 elements and popping them from the queue is O(10 log n), but the 10 does not affect
+for large input sizes. Resulting in O(n + log n) for all steps combined.
+    *Performed in the sortTopTen() function*
